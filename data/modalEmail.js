@@ -1,4 +1,4 @@
-import { username } from '../components/constants.js';
+import { USERNAME_STORE } from '../components/constants.js';
 
 const modalEmail = [
   {
@@ -13,7 +13,7 @@ const modalEmail = [
           {
             el: 'h2',
             classNames: 'email__caption',
-            text: `What\'s your email, ${username}?`
+            text: `What\'s your email, ${USERNAME_STORE}?`
           },
           {
             el: 'input',
