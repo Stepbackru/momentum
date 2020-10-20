@@ -1,20 +1,24 @@
+import {username, email, password} from './constants.js';
 import render from './render.js';
 import template from '../data/template.js';
-
-const username = localStorage.getItem('username');
-const email = localStorage.getItem('email');
-const password = localStorage.getItem('password');
+import modalName from '../data/modalName.js';
+import modalEmail from '../data/modalEmail.js';
+import modalPassword from '../data/modalPassword.js';
 
 const init = () => {
   if (!username) {
-    // modal to enter username
+    renderTemplate(modalName);
   } else if (!email) {
-    // modal to enter email
+    renderTemplate(modalEmail);
   } else if (!password) {
-    // modal to enter password
+    renderTemplate(modalPassword);
   } else {
-    template.forEach(el => render(el));
+    renderTemplate(template);
   }
+}
+
+const renderTemplate = (arr) => {
+  arr.forEach(el => render(el));
 }
 
 export default init;

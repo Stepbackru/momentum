@@ -1,7 +1,7 @@
 const template = [
   {
     el: 'div',
-    classNames: 'wrapper main',
+    classNames: 'wrapper',
     parent: 'body',
     child: [
       {
@@ -34,11 +34,10 @@ const template = [
           {
             el: 'input',
             classNames: 'focus__input',
-            text: 'What is your main focus for today?',
             dataAttr: [['type', 'text'],['autocomplete', 'off']]
           }
         ]
-      },
+      }
     ]
   }
 ]
