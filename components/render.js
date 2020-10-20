@@ -38,7 +38,7 @@ const render = (args) => {
         element.setAttribute(attrName, '');
       }
 
-      if (attrName.match(/value|id|placeholder|type/)) {
+      if (attrName.match(/value|id|placeholder|type|pattern|autocomplete/)) {
         element.setAttribute(attrName, attrValue);
       } else if (attrValue !== '') {
         element.dataset[attrName] = attrValue;
