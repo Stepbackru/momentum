@@ -1,1 +1,49 @@
 @import './assets/css/clear.scss';
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: #545454;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  opacity: 1;
+  transition: 1s ease-in;
+}
+.wrapper-accept {
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+.name__caption,
+.email__caption,
+.password__caption,
+.city__caption,
+.focus__caption {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.name__input,
+.email__input,
+.password__input,
+.city__input,
+.focus__input {
+  padding-top: 2.5rem;
+  min-width: 90%;
+  outline: none;
+  border: none;
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+  background: transparent;
+  border-bottom: 0.3rem solid #fff;
+}

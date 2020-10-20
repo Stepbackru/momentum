@@ -6,7 +6,8 @@ import * as T from '../data/index.js';
 const init = () => {
   if (!C.USERNAME_STORE) {
     renderTemplate(T.modalName);
-    submitForm(C.USERNAME_CLASS, C.USERNAME_SET);
+    submitForm(C.USERNAME_CLASS, C.USERNAME_SET, true);
+    console.log(C.USERNAME_STORE)
   } else if (!C.EMAIL_STORE) {
     renderTemplate(T.modalEmail);
     submitForm(C.EMAIL_CLASS, C.EMAIL_SET);
