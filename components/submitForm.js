@@ -15,9 +15,6 @@ const submitForm = (elem, key, modal) => {
         element.blur();
         if (modal) {
           wrapper.classList.add(`${WRAPPER_CLASS_ACCEPT}`);
-          wrapper.addEventListener('transitionend', (e) => {
-            wrapper.remove();
-          });
         }
       }
     }

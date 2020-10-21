@@ -14,7 +14,6 @@ const init = () => {
   } else if (!emailStore) {
     renderTemplate(T.modalEmail(usernameStore));
     submitForm(C.EMAIL_CLASS, C.EMAIL_SET, true);
-    console.log(passwordStore);
   } else if (!passwordStore) {
     renderTemplate(T.modalPassword);
     submitForm(C.PASSWORD_CLASS, C.PASSWORD_SET, true);
@@ -24,6 +23,7 @@ const init = () => {
   
   const wrapper = document.querySelector(`.${C.WRAPPER_CLASS}`);
   wrapper.addEventListener('transitionend', (e) => {
+    wrapper.remove();
     init();
   });
 }
