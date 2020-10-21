@@ -53,9 +53,31 @@ body {
 }
 
 .wrapper {
+  opacity: 0;
+}
+
+.wrapper-visible {
   opacity: 1;
-  -webkit-transition: 1s ease-in;
-  transition: 1s ease-in;
+  -webkit-animation: fade-in 1s ease-in;
+          animation: fade-in 1s ease-in;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .wrapper-accept {

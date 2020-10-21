@@ -4,19 +4,28 @@ import submitForm from './submitForm.js';
 import * as T from '../data/index.js';
 
 const init = () => {
-  if (!C.USERNAME_STORE) {
+  const usernameStore = localStorage.getItem(`${C.USERNAME_SET}`);
+  const emailStore = localStorage.getItem(`${C.EMAIL_SET}`);
+  const passwordStore = localStorage.getItem(`${C.PASSWORD_SET}`);
+
+  if (!usernameStore) {
     renderTemplate(T.modalName);
     submitForm(C.USERNAME_CLASS, C.USERNAME_SET, true);
-    console.log(C.USERNAME_STORE)
-  } else if (!C.EMAIL_STORE) {
-    renderTemplate(T.modalEmail);
-    submitForm(C.EMAIL_CLASS, C.EMAIL_SET);
-  } else if (!C.PASSWORD_STORE) {
+  } else if (!emailStore) {
+    renderTemplate(T.modalEmail(usernameStore));
+    submitForm(C.EMAIL_CLASS, C.EMAIL_SET, true);
+    console.log(passwordStore);
+  } else if (!passwordStore) {
     renderTemplate(T.modalPassword);
-    submitForm(C.PASSWORD_CLASS, C.PASSWORD_SET);
+    submitForm(C.PASSWORD_CLASS, C.PASSWORD_SET, true);
   } else {
     renderTemplate(T.template);
   }
+  
+  const wrapper = document.querySelector(`.${C.WRAPPER_CLASS}`);
+  wrapper.addEventListener('transitionend', (e) => {
+    init();
+  });
 }
 
 const renderTemplate = (arr) => {

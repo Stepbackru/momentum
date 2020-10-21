@@ -3,10 +3,6 @@ export const USERNAME_SET = 'username';
 export const EMAIL_SET = 'email';
 export const PASSWORD_SET = 'password';
 
-export const USERNAME_STORE = localStorage.getItem(`${USERNAME_SET}`);
-export const EMAIL_STORE = localStorage.getItem(`${EMAIL_SET}`);
-export const PASSWORD_STORE = localStorage.getItem(`${PASSWORD_SET}`);
-
 // Code of key
 export const SUBMIT_KEY = 'Enter';
 

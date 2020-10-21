@@ -1,7 +1,7 @@
 const modalName = [
   {
     el: 'div',
-    classNames: 'wrapper',
+    classNames: 'wrapper wrapper-visible',
     parent: 'body',
     child: [
       {
