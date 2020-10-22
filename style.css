@@ -113,4 +113,14 @@ body {
   background: transparent;
   border-bottom: 0.3rem solid #fff;
 }
+
+.time {
+  font-size: 10rem;
+  color: #fff;
+}
+
+.greating {
+  font-size: 5rem;
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map */

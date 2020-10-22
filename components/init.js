@@ -5,6 +5,7 @@ import background from './background.js';
 import showTime from './showTime.js';
 import greating from './greating.js';
 import * as T from '../data/index.js';
+import timeOfDay from './timeOfDay.js';
 
 const init = () => {
   const usernameStore = localStorage.getItem(`${C.USERNAME_SET}`);
@@ -22,6 +23,8 @@ const init = () => {
     submitForm(C.PASSWORD_CLASS, C.PASSWORD_SET, true);
   } else {
     renderTemplate(T.template);
+    showTime();
+    greating(usernameStore);
   }
   
   const wrapper = document.querySelector(`.${C.WRAPPER_CLASS}`);
@@ -32,8 +35,6 @@ const init = () => {
   
   document.body.classList.add(`${C.VISIBLE_CLASS}`);
   background();
-  showTime();
-  greating(usernameStore);
 }
 
 const renderTemplate = (arr) => {
