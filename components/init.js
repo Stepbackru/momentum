@@ -2,6 +2,8 @@ import * as C from './constants.js';
 import render from './render.js';
 import submitForm from './submitForm.js';
 import background from './background.js';
+import showTime from './showTime.js';
+import greating from './greating.js';
 import * as T from '../data/index.js';
 
 const init = () => {
@@ -30,6 +32,8 @@ const init = () => {
   
   document.body.classList.add(`${C.VISIBLE_CLASS}`);
   background();
+  showTime();
+  greating(usernameStore);
 }
 
 const renderTemplate = (arr) => {

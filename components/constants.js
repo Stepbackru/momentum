@@ -13,6 +13,9 @@ export const PASSWORD_CLASS = 'password__input';
 export const WRAPPER_CLASS = 'wrapper';
 export const ACCEPT_CLASS = 'accept';
 export const VISIBLE_CLASS = 'visible';
+export const TIME_CLASS = 'time';
+export const GREAT_TIME_CLASS = 'greating__time';
+export const GREAT_NAME_CLASS = 'greating__name';
 
 // background
 export const BG_THEME = ['aviation', 'nature'];
