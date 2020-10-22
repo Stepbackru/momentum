@@ -1,6 +1,7 @@
 import * as C from './constants.js';
 import render from './render.js';
 import submitForm from './submitForm.js';
+import background from './background.js';
 import * as T from '../data/index.js';
 
 const init = () => {
@@ -26,6 +27,9 @@ const init = () => {
     wrapper.remove();
     init();
   });
+  
+  document.body.classList.add(`${C.VISIBLE_CLASS}`);
+  background();
 }
 
 const renderTemplate = (arr) => {

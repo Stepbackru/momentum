@@ -13,12 +13,14 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  opacity: 0;
+  transition: 1s ease-out;
 }
 
 .wrapper {
   opacity: 0;
 }
-.wrapper-visible {
+.visible {
   opacity: 1;
   animation: fade-in 1s ease-in;
 }
@@ -26,7 +28,7 @@ body {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
-.wrapper-accept {
+.accept {
   opacity: 0;
   transition: 1s ease-out;
 }

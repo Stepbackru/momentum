@@ -50,13 +50,16 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
 }
 
 .wrapper {
   opacity: 0;
 }
 
-.wrapper-visible {
+.visible {
   opacity: 1;
   -webkit-animation: fade-in 1s ease-in;
           animation: fade-in 1s ease-in;
@@ -80,7 +83,7 @@ body {
   }
 }
 
-.wrapper-accept {
+.accept {
   opacity: 0;
   -webkit-transition: 1s ease-out;
   transition: 1s ease-out;

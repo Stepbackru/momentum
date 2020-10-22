@@ -1,4 +1,4 @@
-import { SUBMIT_KEY, WRAPPER_CLASS, WRAPPER_CLASS_ACCEPT } from './constants.js';
+import { SUBMIT_KEY, WRAPPER_CLASS, ACCEPT_CLASS } from './constants.js';
 
 const submitForm = (elem, key, modal) => {
   const element = document.querySelector(`.${elem}`);
@@ -14,7 +14,7 @@ const submitForm = (elem, key, modal) => {
         element.value = '';
         element.blur();
         if (modal) {
-          wrapper.classList.add(`${WRAPPER_CLASS_ACCEPT}`);
+          wrapper.classList.add(`${ACCEPT_CLASS}`);
         }
       }
     }
