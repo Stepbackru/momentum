@@ -1,4 +1,4 @@
-const modalName = [
+const weatherBlock = [
   {
     el: 'div',
     classNames: 'weather visible',
@@ -24,4 +24,4 @@ const modalName = [
   }
 ]
 
-export default modalName;
+export default weatherBlock;

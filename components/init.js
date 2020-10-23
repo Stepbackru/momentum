@@ -7,6 +7,7 @@ import greating from './greating.js';
 import date from './date.js';
 import showWeather from './showWeather.js';
 import getUserCity from './getUserCity.js';
+import showQuote from './showQuote.js';
 import * as T from '../data/index.js';
 
 const init = () => {
@@ -30,10 +31,12 @@ const init = () => {
   } else {
     renderTemplate(T.template);
     renderTemplate(T.weatherBlock);
+    renderTemplate(T.quoteBlock);
     showTime();
     date(langStore);
     greating(usernameStore);
     showWeather();
+    showQuote();
   }
   
   const wrapper = document.querySelector(`.${C.WRAPPER_CLASS}`);

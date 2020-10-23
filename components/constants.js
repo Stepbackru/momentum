@@ -22,6 +22,8 @@ export const CITY_CLASS = 'weather__city';
 export const WEATH_ICON_CLASS = 'weather__icon';
 export const WEATH_TEMP_CLASS = 'weather__temperature';
 export const WEATH_DESC_CLASS = 'weather__description';
+export const QUOTE_TEXT_CLASS = 'quote__text';
+export const QUOTE_AUTHOR_CLASS = 'quote__author';
 
 // background
 export const BG_THEME = ['aviation', 'nature'];
