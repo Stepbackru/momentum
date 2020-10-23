@@ -39,6 +39,10 @@ export const WEATH_API_KEY = 'a54a1dab66ed11c5fb14c921184f4634';
 // time
 export const DAYS_OF_WEEK = [
   {
+    en: 'Sunday',
+    ru: 'Воскресенье'
+  },
+  {
     en: 'Monday',
     ru: 'Понедельник'
   },
@@ -52,7 +56,7 @@ export const DAYS_OF_WEEK = [
   },
   {
     en: 'Thursday',
-    ru: 'Понедельник'
+    ru: 'Четверг'
   },
   {
     en: 'Friday',
@@ -61,10 +65,6 @@ export const DAYS_OF_WEEK = [
   {
     en: 'Saturday',
     ru: 'Суббота'
-  },
-  {
-    en: 'Sunday',
-    ru: 'Воскресенье'
   }
 ]
 export const MONTHS = [
