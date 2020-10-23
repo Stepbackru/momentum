@@ -15,8 +15,7 @@ export const WRAPPER_CLASS = 'wrapper';
 export const ACCEPT_CLASS = 'accept';
 export const VISIBLE_CLASS = 'visible';
 export const TIME_CLASS = 'time';
-export const GREAT_TIME_CLASS = 'greating__time';
-export const GREAT_NAME_CLASS = 'greating__name';
+export const GREAT_CLASS = 'greating';
 export const TODAY_CLASS = 'today';
 
 // background

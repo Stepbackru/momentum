@@ -13,18 +13,8 @@ const template = [
         classNames: 'today'
       },
       {
-        el: 'div',
-        classNames: 'greating',
-        child: [
-          {
-            el: 'span',
-            classNames: 'greating__time'
-          },
-          {
-            el: 'span',
-            classNames: 'greating__name'
-          }
-        ]
+        el: 'p',
+        classNames: 'greating'
       },
       {
         el: 'div',

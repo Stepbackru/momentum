@@ -56,6 +56,7 @@ body {
 }
 
 .wrapper {
+  max-width: 70rem;
   opacity: 0;
 }
 
@@ -92,7 +93,6 @@ body {
 .name__caption,
 .email__caption,
 .password__caption,
-.city__caption,
 .focus__caption,
 .time,
 .today,
@@ -104,10 +104,9 @@ body {
 .name__input,
 .email__input,
 .password__input,
-.city__input,
 .focus__input {
   padding-top: 2.5rem;
-  min-width: 90%;
+  max-width: 90%;
   outline: none;
   border: none;
   font-size: 5rem;
@@ -123,5 +122,13 @@ body {
 
 .today {
   font-size: 2rem;
+}
+
+.greating {
+  padding: 1.5rem 0 7rem;
+}
+
+.focus__caption {
+  font-size: 4rem;
 }
 /*# sourceMappingURL=style.css.map */
