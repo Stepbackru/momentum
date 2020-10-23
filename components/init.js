@@ -6,12 +6,13 @@ import showTime from './showTime.js';
 import greating from './greating.js';
 import date from './date.js';
 import showWeather from './showWeather.js';
+import getUserCity from './getUserCity.js';
 import * as T from '../data/index.js';
 
 const init = () => {
   localStorage.setItem(`${C.LANG_SET}`, `${C.LANG_EN}`);
-  localStorage.setItem('city', 'moscow');
-  
+  getUserCity();
+
   const usernameStore = localStorage.getItem(`${C.USERNAME_SET}`);
   const emailStore = localStorage.getItem(`${C.EMAIL_SET}`);
   const passwordStore = localStorage.getItem(`${C.PASSWORD_SET}`);

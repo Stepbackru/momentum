@@ -1,7 +1,7 @@
 const modalName = [
   {
     el: 'div',
-    classNames: 'weather',
+    classNames: 'weather visible',
     parent: 'body',
     child: [
       {
