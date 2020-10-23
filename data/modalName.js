@@ -21,6 +21,11 @@ const modalName = [
         ]
       }
     ]
+  },
+  {
+    el: 'div',
+    classNames: 'overlay',
+    parent: 'body'
   }
 ]
 

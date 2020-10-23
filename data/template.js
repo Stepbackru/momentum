@@ -33,6 +33,11 @@ const template = [
         ]
       }
     ]
+  },
+  {
+    el: 'div',
+    classNames: 'overlay',
+    parent: 'body'
   }
 ]
 

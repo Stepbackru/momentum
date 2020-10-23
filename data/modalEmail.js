@@ -22,6 +22,11 @@ const modalEmail = (storeItem) => {
           ]
         }
       ]
+    },
+    {
+      el: 'div',
+      classNames: 'overlay',
+      parent: 'body'
     }
   ]);
 }
