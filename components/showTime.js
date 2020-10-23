@@ -11,7 +11,7 @@ const showTime = () => {
 
   time.textContent = `${addZero(hour)}:${addZero(min)}:${addZero(sec)}`;
 
-  if (min === 0 && sec <= 1) {
+  if (min === 0 && sec < 1) {
     background();
   }
   
