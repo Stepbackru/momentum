@@ -4,6 +4,7 @@ export const EMAIL_SET = 'email';
 export const PASSWORD_SET = 'password';
 export const LANG_SET = 'lang';
 export const CITY_SET = 'city';
+export const THEME_SET = 'theme';
 
 // Code of key
 export const SUBMIT_KEY = 'Enter';

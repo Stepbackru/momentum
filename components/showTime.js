@@ -1,4 +1,5 @@
 import { TIME_CLASS } from './constants.js';
+import background from './background.js';
 
 const showTime = () => {
   const time = document.querySelector(`.${TIME_CLASS}`);
@@ -10,6 +11,10 @@ const showTime = () => {
 
   time.textContent = `${addZero(hour)}:${addZero(min)}:${addZero(sec)}`;
 
+  if (min === 0 && sec <= 1) {
+    background();
+  }
+  
   setTimeout(showTime, 1000);
 }
 
