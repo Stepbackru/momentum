@@ -3,6 +3,7 @@ export const USERNAME_SET = 'username';
 export const EMAIL_SET = 'email';
 export const PASSWORD_SET = 'password';
 export const LANG_SET = 'lang';
+export const CITY_SET = 'city';
 
 // Code of key
 export const SUBMIT_KEY = 'Enter';
@@ -17,6 +18,10 @@ export const VISIBLE_CLASS = 'visible';
 export const TIME_CLASS = 'time';
 export const GREAT_CLASS = 'greating';
 export const TODAY_CLASS = 'today';
+export const CITY_CLASS = 'weather__city';
+export const WEATH_ICON_CLASS = 'weather__icon';
+export const WEATH_TEMP_CLASS = 'weather__temperature';
+export const WEATH_DESC_CLASS = 'weather__description';
 
 // background
 export const BG_THEME = ['aviation', 'nature'];
@@ -25,6 +30,9 @@ export const COUNT_IMAGES = 5;
 // langs
 export const LANG_EN = 'en';
 export const LANG_RU = 'ru';
+
+// weather
+export const WEATH_API_KEY = 'a54a1dab66ed11c5fb14c921184f4634';
 
 // time
 export const DAYS_OF_WEEK = [

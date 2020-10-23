@@ -5,10 +5,12 @@ import background from './background.js';
 import showTime from './showTime.js';
 import greating from './greating.js';
 import date from './date.js';
+import showWeather from './showWeather.js';
 import * as T from '../data/index.js';
 
 const init = () => {
   localStorage.setItem(`${C.LANG_SET}`, `${C.LANG_EN}`);
+  localStorage.setItem('city', 'moscow');
   
   const usernameStore = localStorage.getItem(`${C.USERNAME_SET}`);
   const emailStore = localStorage.getItem(`${C.EMAIL_SET}`);
@@ -26,9 +28,11 @@ const init = () => {
     submitForm(C.PASSWORD_CLASS, C.PASSWORD_SET, true);
   } else {
     renderTemplate(T.template);
+    renderTemplate(T.weatherBlock);
     showTime();
     date(langStore);
     greating(usernameStore);
+    showWeather();
   }
   
   const wrapper = document.querySelector(`.${C.WRAPPER_CLASS}`);
