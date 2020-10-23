@@ -149,6 +149,34 @@ body {
   text-align: right;
 }
 
+.background-change {
+  margin: 0;
+  padding: 0;
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background: url("./assets/images/reload.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.background-change:hover {
+  -webkit-filter: grayscale(0.8);
+          filter: grayscale(0.8);
+}
+
+.background-change:active {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
 .overlay {
   position: fixed;
   width: 100%;

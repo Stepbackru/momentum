@@ -35,6 +35,11 @@ const template = [
     ]
   },
   {
+    el: 'button',
+    classNames: 'background-change',
+    parent: 'body'
+  },
+  {
     el: 'div',
     classNames: 'overlay',
     parent: 'body'

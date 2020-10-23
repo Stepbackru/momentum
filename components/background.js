@@ -1,4 +1,4 @@
-import { BG_THEME, COUNT_IMAGES, THEME_SET } from './constants.js';
+import { BG_THEME, COUNT_IMAGES, THEME_SET} from './constants.js';
 import timeOfDay from './timeOfDay.js';
 
 const background = () => {
@@ -9,7 +9,7 @@ const background = () => {
   const bgRandomUrl = `./assets/templates/${
     themeStore ? themeStore : BG_THEME[randomTheme]
   }/${timeOfDay()}/${randomImage(COUNT_IMAGES)}.jpg`;
-
+  
   body.style.backgroundImage = `url(${bgRandomUrl})`;
 }
 

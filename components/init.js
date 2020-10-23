@@ -45,11 +45,22 @@ const init = () => {
   });
   
   document.body.classList.add(`${C.VISIBLE_CLASS}`);
+  const changeButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);
+  changeButton.addEventListener('click', changeBgOnClick);
   background();
 }
 
 const renderTemplate = (arr) => {
   arr.forEach(el => render(el));
 }
+
+const changeBgOnClick = () => {
+  const changeButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);
+  
+  background();
+  changeButton.disabled = true;
+  setTimeout(() => changeButton.disabled = false, 1000);
+}
+
 
 export default init;
