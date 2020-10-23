@@ -17,7 +17,6 @@ const init = () => {
   const usernameStore = localStorage.getItem(`${C.USERNAME_SET}`);
   const emailStore = localStorage.getItem(`${C.EMAIL_SET}`);
   const passwordStore = localStorage.getItem(`${C.PASSWORD_SET}`);
-  const langStore = localStorage.getItem(`${C.LANG_SET}`);
 
   if (!usernameStore) {
     renderTemplate(T.modalName);
@@ -33,7 +32,7 @@ const init = () => {
     renderTemplate(T.weatherBlock);
     renderTemplate(T.quoteBlock);
     showTime();
-    date(langStore);
+    date();
     greating(usernameStore);
     showWeather();
     showQuote();

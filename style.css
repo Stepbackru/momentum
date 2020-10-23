@@ -98,6 +98,7 @@ body {
 }
 
 .today {
+  text-transform: capitalize;
   font-size: 2rem;
 }
 
