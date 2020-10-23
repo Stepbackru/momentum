@@ -93,7 +93,10 @@ body {
 .email__caption,
 .password__caption,
 .city__caption,
-.focus__caption {
+.focus__caption,
+.time,
+.today,
+.greating {
   font-size: 5rem;
   color: #fff;
 }
@@ -116,11 +119,9 @@ body {
 
 .time {
   font-size: 10rem;
-  color: #fff;
 }
 
-.greating {
-  font-size: 5rem;
-  color: #fff;
+.today {
+  font-size: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

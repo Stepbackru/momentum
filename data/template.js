@@ -9,6 +9,10 @@ const template = [
         classNames: 'time'
       },
       {
+        el: 'p',
+        classNames: 'today'
+      },
+      {
         el: 'div',
         classNames: 'greating',
         child: [
