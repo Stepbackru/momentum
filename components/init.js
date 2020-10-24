@@ -33,7 +33,7 @@ const init = () => {
     renderTemplate(T.quoteBlock);
     showTime();
     date();
-    greating(usernameStore);
+    greating();
     showWeather();
     showQuote();
   }

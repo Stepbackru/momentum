@@ -1,5 +1,8 @@
 import { TIME_CLASS } from './constants.js';
 import background from './background.js';
+import greating from './greating.js';
+import showWeather from './showWeather.js';
+import date from './date.js';
 
 const showTime = () => {
   const time = document.querySelector(`.${TIME_CLASS}`);
@@ -13,6 +16,9 @@ const showTime = () => {
 
   if (min === 0 && sec < 1) {
     background();
+    date();
+    greating();
+    showWeather();
   }
   
   setTimeout(showTime, 1000);
