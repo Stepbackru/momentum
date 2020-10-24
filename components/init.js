@@ -45,8 +45,12 @@ const init = () => {
   });
   
   document.body.classList.add(`${C.VISIBLE_CLASS}`);
-  const changeButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);
-  changeButton.addEventListener('click', changeBgOnClick);
+  const changeBGButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);
+  const changeQuoteButton = document.querySelector(`.${C.QUOTE_CHANGE_CLASS}`);
+  
+  changeBGButton.addEventListener('click', changeBgOnClick);
+  changeQuoteButton.addEventListener('click', changeQuoteOnClick);
+
   background();
 }
 
@@ -58,6 +62,14 @@ const changeBgOnClick = () => {
   const changeButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);
   
   background();
+  changeButton.disabled = true;
+  setTimeout(() => changeButton.disabled = false, 1000);
+}
+
+const changeQuoteOnClick = () => {
+  const changeButton = document.querySelector(`.${C.QUOTE_CHANGE_CLASS}`);
+  
+  showQuote();
   changeButton.disabled = true;
   setTimeout(() => changeButton.disabled = false, 1000);
 }

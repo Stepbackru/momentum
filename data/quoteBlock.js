@@ -11,7 +11,11 @@ const quoteBlock = [
       {
         el: 'figcaption',
         classNames: 'quote__author'
-      }
+      },
+      {
+        el: 'button',
+        classNames: 'quote__change'
+      },
     ]
   }
 ]
