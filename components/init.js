@@ -11,7 +11,11 @@ import showQuote from './showQuote.js';
 import * as T from '../data/index.js';
 
 const init = () => {
-  localStorage.setItem(`${C.LANG_SET}`, `${C.LANG_EN}`);
+  const langStore = localStorage.getItem(`${C.LANG_SET}`);
+  if (!langStore) {
+    localStorage.setItem(`${C.LANG_SET}`, `${C.LANG_EN}`);
+  }
+  
   getUserCity();
 
   const usernameStore = localStorage.getItem(`${C.USERNAME_SET}`);
@@ -28,7 +32,7 @@ const init = () => {
     renderTemplate(T.modalPassword);
     submitForm(C.PASSWORD_CLASS, C.PASSWORD_SET, true);
   } else {
-    renderTemplate(T.template);
+    renderTemplate(T.template());
     renderTemplate(T.weatherBlock);
     renderTemplate(T.quoteBlock);
     showTime();
@@ -47,7 +51,7 @@ const init = () => {
   document.body.classList.add(`${C.VISIBLE_CLASS}`);
   const changeBGButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);
   const changeQuoteButton = document.querySelector(`.${C.QUOTE_CHANGE_CLASS}`);
-  
+
   changeBGButton.addEventListener('click', changeBgOnClick);
   changeQuoteButton.addEventListener('click', changeQuoteOnClick);
 

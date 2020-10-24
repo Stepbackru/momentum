@@ -30,11 +30,62 @@ export const QUOTE_CHANGE_CLASS = 'quote__change';
 
 // background
 export const BG_THEME = ['aviation', 'nature'];
+export const THEME = [
+  {
+    name_en: 'Choice template',
+    name_ru: 'Выберите тему'
+  },
+  {
+    en: 'aviation',
+    ru: 'авиация'
+  },
+  {
+    en: 'nature',
+    ru: 'природа'
+  }
+];
 export const COUNT_IMAGES = 5;
 
 // langs
 export const LANG_EN = 'en';
 export const LANG_RU = 'ru';
+export const LANG = [
+  {
+    name_en: 'Choice language',
+    name_ru: 'Выберите язык'
+  },
+  {
+    name: 'English',
+    short: 'en'
+  },
+  {
+    name: 'Русский',
+    short: 'ru'
+  }
+];
 
 // weather
 export const WEATH_API_KEY = 'a54a1dab66ed11c5fb14c921184f4634';
+
+// settings
+export const SETTINGS= [
+  {
+    en: 'General',
+    ru: 'Основные',
+    class: 'settings__item settings__item-active',
+    lang_cap_en: 'Language Settings:',
+    lang_cap_ru: 'Настройки языка:',
+    theme_cap_en: 'Template Settings:',
+    theme_cap_ru: 'Настройки темы:',
+  },
+  {
+    en: 'Profile',
+    ru: 'Профиль',
+    class: 'settings__item'
+  },
+  {
+    en: 'Logout',
+    ru: 'Выход',
+    class: 'settings__item logout'
+  }
+]

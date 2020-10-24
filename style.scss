@@ -136,6 +136,91 @@ body {
   }
 }
 
+.settings__button {
+  margin: 0;
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  border: none;
+  outline: none;
+  background: url("./assets/images/settings.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+  opacity: .5;
+  transition: .3s;
+  
+  &:hover {
+    opacity: .8;
+  }
+  &:active{
+    transform: scale(1.1);
+  }
+}
+
+.settings {
+  padding: 1rem;
+  width: 60rem;
+  height: 40%;
+  display: flex;
+  position: absolute;
+  bottom: 6rem;
+  left: 1.5rem;
+  border-radius: 1rem;
+  background: #fff;
+  z-index: 100;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    border-right: .1rem solid #bbbbbb;
+    padding: 1rem 5rem 0 1rem;
+  }
+  &__item {
+    padding: 1rem 0;
+    font-size: 2rem;
+    text-align: left;
+    color: #000;
+    opacity: .5s ease-in;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+
+  &__item-active {
+    font-size: 2.5rem;
+    font-weight: 600;
+    opacity: 1;
+  }
+
+  .logout {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1.4rem;
+    left: 1.3rem;
+    border: .7rem solid transparent;
+    border-top: 1rem solid #fff;
+    display: block;
+    width: 0;
+    height: 0;
+  }
+}
+
+.theme__select {
+  text-transform: capitalize;
+}
+
 .overlay {
   position: fixed;
   width: 100%;
