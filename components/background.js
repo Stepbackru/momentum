@@ -10,7 +10,9 @@ const background = () => {
     themeStore ? themeStore : BG_THEME[randomTheme]
   }/${timeOfDay()}/${randomImage(COUNT_IMAGES)}.jpg`;
   
-  body.style.backgroundImage = `url(${bgRandomUrl})`;
+  fetch(bgRandomUrl)
+    .then(res => res.url)
+    .then(url => body.style.backgroundImage = `url(${url})`);
 }
 
 const randomImage = (n) => {
