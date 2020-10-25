@@ -1,4 +1,4 @@
-import { QUOTE_CHANGE_CLASS } from './components/constants.js';
+import { QUOTE_CHANGE_CLASS, LOGOUT_CLASS } from './components/constants.js';
 import init from './components/init.js';
 import background from './components/background.js';
 import renderTemplate from './components/renderTemplate.js';
@@ -15,6 +15,11 @@ window.onload = () => {
   showQuote();
   settings();
 
+  const logout = document.querySelector(`.${LOGOUT_CLASS}`);
+  logout.addEventListener('click', (e) => {
+    localStorage.clear();
+    location.reload();
+  });
   const changeQuoteButton = document.querySelector(`.${QUOTE_CHANGE_CLASS}`);
   changeQuoteButton.addEventListener('click', changeQuoteOnClick);
 };

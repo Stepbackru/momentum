@@ -60,6 +60,7 @@ const init = () => {
       localStorage.setItem(`${C.FOCUS_SET}`, '');
     });
 
+
     const changeBGButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);
     changeBGButton.addEventListener('click', changeBgOnClick);
   }

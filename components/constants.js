@@ -51,6 +51,7 @@ export const THEME_SELECT_CLASS = 'theme__select';
 export const USERNAME_CHANGE_CLASS = 'username__change';
 export const CITY_CHANGE_CLASS = 'city__change';
 export const SETTINGS_LIST_CLASS = 'settings__list';
+export const LOGOUT_CLASS = 'logout';
 
 // background
 export const THEME = [
