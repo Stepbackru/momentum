@@ -16,6 +16,7 @@ export const PASSWORD_CLASS = 'password__input';
 export const WRAPPER_CLASS = 'wrapper';
 export const ACCEPT_CLASS = 'accept';
 export const VISIBLE_CLASS = 'visible';
+export const OVERLAY_CLASS = 'overlay';
 export const TIME_CLASS = 'time';
 export const GREAT_CLASS = 'greating';
 export const TODAY_CLASS = 'today';
@@ -29,7 +30,6 @@ export const BG_CHANGE_CLASS = 'background-change';
 export const QUOTE_CHANGE_CLASS = 'quote__change';
 
 // background
-export const BG_THEME = ['aviation', 'nature'];
 export const THEME = [
   {
     name_en: 'Choice template',
@@ -47,8 +47,6 @@ export const THEME = [
 export const COUNT_IMAGES = 5;
 
 // langs
-export const LANG_EN = 'en';
-export const LANG_RU = 'ru';
 export const LANG = [
   {
     name_en: 'Choice language',
@@ -68,7 +66,7 @@ export const LANG = [
 export const WEATH_API_KEY = 'a54a1dab66ed11c5fb14c921184f4634';
 
 // settings
-export const SETTINGS= [
+export const SETTINGS = [
   {
     en: 'General',
     ru: 'Основные',
@@ -88,4 +86,31 @@ export const SETTINGS= [
     ru: 'Выход',
     class: 'settings__item logout'
   }
-]
+];
+
+// inputs
+export const TEXT_INPUT = (inputName, storeItem) => {
+  const inputs = [
+    {
+      id: 'name',
+      en: 'Hello, what\'s your name?',
+      ru: 'Здравствуйте, как вас зовут?'
+    },
+    {
+      id: 'email',
+      en: `What\'s your email, ${storeItem}?`,
+      ru: `Какой у вас email, ${storeItem}?`
+    },
+    {
+      id: 'password',
+      en: 'Please choose a password.',
+      ru: 'Пожалуйста введите свой пароль.'
+    },
+    {
+      id: 'focus',
+      en: 'What is your main focus for today?',
+      ru: 'Чем вы займётесь сегодня?'
+    }
+  ];
+  return inputs.find(elem => elem.id === inputName);
+}

@@ -1,4 +1,7 @@
-const modalEmail = (storeItem) => {
+import { LANG_SET, TEXT_INPUT } from '../components/constants.js';
+
+const modalEmail = (username) => {
+  const langStore = localStorage.getItem(`${LANG_SET}`);
   return ([
     {
       el: 'div',
@@ -12,7 +15,7 @@ const modalEmail = (storeItem) => {
             {
               el: 'h2',
               classNames: 'email__caption',
-              text: `What\'s your email, ${storeItem}?`
+              text: `${TEXT_INPUT('email', username)[`${langStore}`]}`
             },
             {
               el: 'input',
@@ -22,11 +25,6 @@ const modalEmail = (storeItem) => {
           ]
         }
       ]
-    },
-    {
-      el: 'div',
-      classNames: 'overlay',
-      parent: 'body'
     }
   ]);
 }

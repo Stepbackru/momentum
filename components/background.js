@@ -1,13 +1,15 @@
-import { BG_THEME, COUNT_IMAGES, THEME_SET} from './constants.js';
+import { THEME, COUNT_IMAGES, THEME_SET} from './constants.js';
 import timeOfDay from './timeOfDay.js';
 
-const background = () => {
+const arrTheme = THEME.splice(1);
+
+export const background = () => {
   const body = document.body;
-  const randomTheme = Math.floor(Math.random() * BG_THEME.length);
+  const randomTheme = Math.floor(Math.random() * arrTheme.length);
   const themeStore = localStorage.getItem(`${THEME_SET}`);
 
   const bgRandomUrl = `./assets/templates/${
-    themeStore ? themeStore : BG_THEME[randomTheme]
+    themeStore ? themeStore : arrTheme[randomTheme].en
   }/${timeOfDay()}/${randomImage(COUNT_IMAGES)}.jpg`;
   
   fetch(bgRandomUrl)

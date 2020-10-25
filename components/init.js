@@ -13,7 +13,8 @@ import * as T from '../data/index.js';
 const init = () => {
   const langStore = localStorage.getItem(`${C.LANG_SET}`);
   if (!langStore) {
-    localStorage.setItem(`${C.LANG_SET}`, `${C.LANG_EN}`);
+    localStorage.setItem(`${C.LANG_SET}`, `${C.LANG
+    .find(elem => elem.short === 'en').short}`);
   }
   
   getUserCity();
@@ -23,13 +24,14 @@ const init = () => {
   const passwordStore = localStorage.getItem(`${C.PASSWORD_SET}`);
 
   if (!usernameStore) {
-    renderTemplate(T.modalName);
+    renderTemplate(T.modalName());
+    renderTemplate(T.overlayBlock);
     submitForm(C.USERNAME_CLASS, C.USERNAME_SET, true);
   } else if (!emailStore) {
     renderTemplate(T.modalEmail(usernameStore));
     submitForm(C.EMAIL_CLASS, C.EMAIL_SET, true);
   } else if (!passwordStore) {
-    renderTemplate(T.modalPassword);
+    renderTemplate(T.modalPassword());
     submitForm(C.PASSWORD_CLASS, C.PASSWORD_SET, true);
   } else {
     renderTemplate(T.template());
@@ -40,6 +42,14 @@ const init = () => {
     greating();
     showWeather();
     showQuote();
+
+    const changeBGButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);
+    const changeQuoteButton = document.querySelector(`.${C.QUOTE_CHANGE_CLASS}`);
+    const test = document.querySelector('.settings__button');
+  
+    changeBGButton.addEventListener('click', changeBgOnClick);
+    changeQuoteButton.addEventListener('click', changeQuoteOnClick);
+    test.addEventListener('click', init);
   }
   
   const wrapper = document.querySelector(`.${C.WRAPPER_CLASS}`);
@@ -49,13 +59,6 @@ const init = () => {
   });
   
   document.body.classList.add(`${C.VISIBLE_CLASS}`);
-  const changeBGButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);
-  const changeQuoteButton = document.querySelector(`.${C.QUOTE_CHANGE_CLASS}`);
-
-  changeBGButton.addEventListener('click', changeBgOnClick);
-  changeQuoteButton.addEventListener('click', changeQuoteOnClick);
-
-  background();
 }
 
 const renderTemplate = (arr) => {

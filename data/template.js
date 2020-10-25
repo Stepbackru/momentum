@@ -1,4 +1,4 @@
-import { LANG_SET, LANG, SETTINGS, THEME } from '../components/constants.js';
+import { LANG_SET, LANG, SETTINGS, THEME, TEXT_INPUT } from '../components/constants.js';
 
 const template = () => {
   const langStore = localStorage.getItem(`${LANG_SET}`);
@@ -28,9 +28,7 @@ const template = () => {
             {
               el: 'h2',
               classNames: 'focus__caption',
-              text: `${langStore === 'en' ? 
-              'What is your main focus for today?' :
-              'Чем вы займётесь сегодня?'}`
+              text: `${TEXT_INPUT('focus')[`${langStore}`]}`
             },
             {
               el: 'input',
@@ -98,8 +96,7 @@ const template = () => {
                       child: LANG.map(elem => {
                         return ({
                           el: 'option',
-                          text: `${elem[`name_${langStore}`] ? elem[`name_${langStore}`] : elem.name}`,
-                          dataAttr: [['theme', `${elem.en}`]]
+                          text: `${elem[`name_${langStore}`] ? elem[`name_${langStore}`] : elem.name}`                     
                         })
                       })
                     }
@@ -122,8 +119,7 @@ const template = () => {
                       child: THEME.map(elem => {
                         return ({
                           el: 'option',
-                          text: `${elem[`name_${langStore}`] ? elem[`name_${langStore}`] : elem[`${langStore}`]}`,
-                          dataAttr: [['theme', `${elem.short}`]]
+                          text: `${elem[`name_${langStore}`] ? elem[`name_${langStore}`] : elem[`${langStore}`]}`
                         })
                       })
                     }
@@ -138,11 +134,6 @@ const template = () => {
           ]
         }
       ]
-    },
-    {
-      el: 'div',
-      classNames: 'overlay',
-      parent: 'body'
     }
   ]);
 }
