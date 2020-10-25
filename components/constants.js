@@ -5,6 +5,7 @@ export const PASSWORD_SET = 'password';
 export const LANG_SET = 'lang';
 export const CITY_SET = 'city';
 export const THEME_SET = 'theme';
+export const FOCUS_SET = 'focus';
 
 // Code of key
 export const SUBMIT_KEY = 'Enter';
@@ -13,6 +14,12 @@ export const SUBMIT_KEY = 'Enter';
 export const USERNAME_CLASS = 'name__input';
 export const EMAIL_CLASS = 'email__input';
 export const PASSWORD_CLASS = 'password__input';
+export const FOCUS_CLASS = 'focus';
+export const FOCUS_INPUT_CLASS = 'focus__input';
+export const FOCUS_DIS_CLASS = 'focus-disable';
+export const TODO_CLASS = 'todo';
+export const TODO_ACT_CLASS = 'todo-active';
+export const TODO_CHECK_CLASS = 'todo__check';
 export const WRAPPER_CLASS = 'wrapper';
 export const ACCEPT_CLASS = 'accept';
 export const VISIBLE_CLASS = 'visible';
@@ -24,6 +31,8 @@ export const WEATHER_CLASS = 'weather';
 export const CITY_CLASS = 'weather__city';
 export const WEATH_ICON_CLASS = 'weather__icon';
 export const WEATH_TEMP_CLASS = 'weather__temperature';
+export const WEATH_WIND_CLASS = 'weather__wind';
+export const WEATH_HUM_CLASS = 'weather__humidity';
 export const WEATH_DESC_CLASS = 'weather__description';
 export const QUOTE_TEXT_CLASS = 'quote__text';
 export const QUOTE_AUTHOR_CLASS = 'quote__author';
@@ -78,6 +87,19 @@ export const LANG = [
 
 // weather
 export const WEATH_API_KEY = 'a54a1dab66ed11c5fb14c921184f4634';
+export const WEATH_LANG = [
+  {
+    wind: {
+      en: 'wind',
+      ru: 'ветер'
+    },
+    humidity: {
+      en: 'humidity',
+      ru: 'влажность'
+    }
+  }
+];
+
 
 // settings
 export const SETTINGS = [

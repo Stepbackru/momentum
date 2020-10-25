@@ -2,15 +2,20 @@ import {
   CITY_CLASS, 
   WEATH_ICON_CLASS, 
   WEATH_TEMP_CLASS,
+  WEATH_WIND_CLASS,
+  WEATH_HUM_CLASS,
   WEATH_DESC_CLASS,
   LANG_SET,
   CITY_SET,
-  WEATH_API_KEY } from './constants.js'
+  WEATH_API_KEY,
+  WEATH_LANG } from './constants.js'
 
 const showWeather = async () => {
   const city = document.querySelector(`.${CITY_CLASS}`);
   const weathIcon = document.querySelector(`.${WEATH_ICON_CLASS}`);
   const weathTemp = document.querySelector(`.${WEATH_TEMP_CLASS}`);
+  const weathWind = document.querySelector(`.${WEATH_WIND_CLASS}`);
+  const weathHum = document.querySelector(`.${WEATH_HUM_CLASS}`);
   const weathDesc = document.querySelector(`.${WEATH_DESC_CLASS}`);
   const langStore = localStorage.getItem(`${LANG_SET}`);
   const cityStore = localStorage.getItem(`${CITY_SET}`);
@@ -23,6 +28,14 @@ const showWeather = async () => {
     city.textContent = `${cityStore}`;
     weathIcon.classList.add(`owf-${data.weather[0].id}`);
     weathTemp.textContent = `${Math.floor(data.main.temp)}°C`;
+    weathWind.textContent = `wind: ${data.wind.speed} m/s`;
+    // weathWind.textContent = `${WEATH_LANG.forEach(el =>
+    //   el.wind[`${langStore}`]
+    // })}: ${data.wind.speed} m/s`;
+    // weathHum.textContent = `${WEATH_LANG.forEach(el => {
+    //   el.humidity[`${langStore}`]
+    // })}: ${data.main.humidity}%`;
+    weathHum.textContent = `humidity: ${data.main.humidity}%`;
     weathDesc.textContent = data.weather[0].description;
   } catch {
     alert('Please, enter correct city');

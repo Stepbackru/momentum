@@ -18,6 +18,14 @@ const weatherBlock = [
       },
       {
         el: 'p',
+        classNames: 'weather__wind'
+      },
+      {
+        el: 'p',
+        classNames: 'weather__humidity'
+      },
+      {
+        el: 'p',
         classNames: 'weather__description'
       }
     ]

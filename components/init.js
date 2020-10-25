@@ -11,10 +11,13 @@ import * as T from '../data/index.js';
 
 const init = () => {
   const langStore = localStorage.getItem(`${C.LANG_SET}`);
+  const focusStore = localStorage.getItem(`${C.FOCUS_SET}`);
+
   if (!langStore) {
     localStorage.setItem(`${C.LANG_SET}`, `${C.LANG
     .find(elem => elem.short === 'en').short}`);
   }
+
   
   getUserCity();
 
@@ -39,9 +42,25 @@ const init = () => {
     date();
     greating();
     showWeather();
+    submitForm(C.FOCUS_INPUT_CLASS, C.FOCUS_SET, false);
+
+
+    const focus = document.querySelector(`.${C.FOCUS_CLASS}`);
+    const todo = document.querySelector(`.${C.TODO_CLASS}`);
+    if (focusStore) {
+      focus.classList.toggle(`${C.FOCUS_DIS_CLASS}`);
+      todo.classList.toggle(`${C.TODO_ACT_CLASS}`);
+    }
+
+    const checkbox = document.querySelector(`.${C.TODO_CHECK_CLASS}`);
+    checkbox.addEventListener('change', (e) => {
+      focus.classList.toggle(`${C.FOCUS_DIS_CLASS}`);
+      todo.classList.toggle(`${C.TODO_ACT_CLASS}`);
+      
+      localStorage.setItem(`${C.FOCUS_SET}`, '');
+    });
 
     const changeBGButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);
-  
     changeBGButton.addEventListener('click', changeBgOnClick);
   }
   

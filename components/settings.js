@@ -26,7 +26,6 @@ import {
 import renderTemplate from './renderTemplate.js';
 import settingsBlock from '../data/settingsBlock.js';
 import background from './background.js';
-import showWeather from './showWeather.js';
 import init from './init.js';
 
 const settings = () => {
