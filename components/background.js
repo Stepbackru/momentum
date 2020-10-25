@@ -1,7 +1,7 @@
 import { THEME, COUNT_IMAGES, THEME_SET} from './constants.js';
 import timeOfDay from './timeOfDay.js';
 
-const arrTheme = THEME.splice(1);
+const arrTheme = THEME.slice().splice(1);
 
 export const background = () => {
   const body = document.body;

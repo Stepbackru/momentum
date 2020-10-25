@@ -1,5 +1,5 @@
 import * as C from './constants.js';
-import render from './render.js';
+import renderTemplate from './renderTemplate.js';
 import submitForm from './submitForm.js';
 import background from './background.js';
 import showTime from './showTime.js';
@@ -7,7 +7,6 @@ import greating from './greating.js';
 import date from './date.js';
 import showWeather from './showWeather.js';
 import getUserCity from './getUserCity.js';
-import showQuote from './showQuote.js';
 import * as T from '../data/index.js';
 
 const init = () => {
@@ -36,20 +35,14 @@ const init = () => {
   } else {
     renderTemplate(T.template());
     renderTemplate(T.weatherBlock);
-    renderTemplate(T.quoteBlock);
     showTime();
     date();
     greating();
     showWeather();
-    showQuote();
 
     const changeBGButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);
-    const changeQuoteButton = document.querySelector(`.${C.QUOTE_CHANGE_CLASS}`);
-    const test = document.querySelector('.settings__button');
   
     changeBGButton.addEventListener('click', changeBgOnClick);
-    changeQuoteButton.addEventListener('click', changeQuoteOnClick);
-    test.addEventListener('click', init);
   }
   
   const wrapper = document.querySelector(`.${C.WRAPPER_CLASS}`);
@@ -61,10 +54,6 @@ const init = () => {
   document.body.classList.add(`${C.VISIBLE_CLASS}`);
 }
 
-const renderTemplate = (arr) => {
-  arr.forEach(el => render(el));
-}
-
 const changeBgOnClick = () => {
   const changeButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);
   
@@ -72,14 +61,5 @@ const changeBgOnClick = () => {
   changeButton.disabled = true;
   setTimeout(() => changeButton.disabled = false, 1000);
 }
-
-const changeQuoteOnClick = () => {
-  const changeButton = document.querySelector(`.${C.QUOTE_CHANGE_CLASS}`);
-  
-  showQuote();
-  changeButton.disabled = true;
-  setTimeout(() => changeButton.disabled = false, 1000);
-}
-
 
 export default init;

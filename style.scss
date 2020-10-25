@@ -162,7 +162,7 @@ body {
   max-width: 60rem;
   width: 100%;
   height: 40%;
-  display: flex;
+  display: none;
   position: absolute;
   bottom: 6rem;
   left: 1.5rem;
@@ -195,6 +195,41 @@ body {
     opacity: 1;
   }
 
+  &__view {
+    .general,
+    .profile {
+      display: none;
+
+      &__caption {
+        font-size: 2.5rem;
+        padding: 1rem 0 1rem 2rem;
+        text-align: left;
+      }
+    }
+    .lang,
+    .theme,
+    .username,
+    .city {
+      display: flex;
+      padding: 1rem;
+
+      &__caption {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        padding-right: 1rem;;
+      }
+      &__select {
+        border-radius: 1rem;
+        background: rgb(251,251,255);
+        background: linear-gradient(180deg, rgba(251,251,255,1) 27%, rgba(183,188,189,1) 100%);
+      }
+    }
+    
+    .view-active {
+      display: block;
+    }
+  }
+
   .logout {
     position: absolute;
     bottom: 1rem;
@@ -212,6 +247,10 @@ body {
     width: 0;
     height: 0;
   }
+}
+
+.settings-active {
+  display: flex;
 }
 
 .theme__select {

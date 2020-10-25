@@ -15,14 +15,19 @@ const showWeather = async () => {
   const langStore = localStorage.getItem(`${LANG_SET}`);
   const cityStore = localStorage.getItem(`${CITY_SET}`);
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityStore}&lang=${langStore}&appid=${WEATH_API_KEY}&units=metric`;
-  const res = await fetch(url);
-  const data = await res.json();
+  try {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityStore}&lang=${langStore}&appid=${WEATH_API_KEY}&units=metric`;
+    const res = await fetch(url);
+    const data = await res.json();
 
-  city.textContent = `${cityStore}`;
-  weathIcon.classList.add(`owf-${data.weather[0].id}`);
-  weathTemp.textContent = `${Math.floor(data.main.temp)}°C`;
-  weathDesc.textContent = data.weather[0].description;
+    city.textContent = `${cityStore}`;
+    weathIcon.classList.add(`owf-${data.weather[0].id}`);
+    weathTemp.textContent = `${Math.floor(data.main.temp)}°C`;
+    weathDesc.textContent = data.weather[0].description;
+  } catch {
+    alert('Please, enter correct city');
+  }
+
 }
 
 export default showWeather;

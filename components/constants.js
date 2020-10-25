@@ -20,6 +20,7 @@ export const OVERLAY_CLASS = 'overlay';
 export const TIME_CLASS = 'time';
 export const GREAT_CLASS = 'greating';
 export const TODAY_CLASS = 'today';
+export const WEATHER_CLASS = 'weather';
 export const CITY_CLASS = 'weather__city';
 export const WEATH_ICON_CLASS = 'weather__icon';
 export const WEATH_TEMP_CLASS = 'weather__temperature';
@@ -28,12 +29,25 @@ export const QUOTE_TEXT_CLASS = 'quote__text';
 export const QUOTE_AUTHOR_CLASS = 'quote__author';
 export const BG_CHANGE_CLASS = 'background-change';
 export const QUOTE_CHANGE_CLASS = 'quote__change';
+export const SETTINGS_BTN_CLASS = 'settings__button';
+export const SETTINGS_CLASS = 'settings';
+export const SETTINGS_ACT_CLASS = 'settings-active';
+export const SETTINGS_ITEM_CLASS = 'settings__item';
+export const SETTINGS_VIEW_ITEM_CLASS = 'view__item';
+export const SETTINGS_VIEW_ITEM_ACT_CLASS = 'view-active';
+export const SETTINGS_ITEM_ACT_CLASS = 'settings__item-active';
+export const PROFILE_CLASS = 'profile';
+export const LANG_SELECT_CLASS = 'lang__select';
+export const THEME_SELECT_CLASS = 'theme__select';
+export const USERNAME_CHANGE_CLASS = 'username__change';
+export const CITY_CHANGE_CLASS = 'city__change';
+export const SETTINGS_LIST_CLASS = 'settings__list';
 
 // background
 export const THEME = [
   {
-    name_en: 'Choice template',
-    name_ru: 'Выберите тему'
+    en: 'Choice template',
+    ru: 'Выберите тему'
   },
   {
     en: 'aviation',
@@ -49,8 +63,8 @@ export const COUNT_IMAGES = 5;
 // langs
 export const LANG = [
   {
-    name_en: 'Choice language',
-    name_ru: 'Выберите язык'
+    name: 'Choice language',
+    short: 'Выберите язык'
   },
   {
     name: 'English',
@@ -70,6 +84,8 @@ export const SETTINGS = [
   {
     en: 'General',
     ru: 'Основные',
+    cap_en: 'General settings',
+    cap_ru: 'Основные настройки',
     class: 'settings__item settings__item-active',
     lang_cap_en: 'Language Settings:',
     lang_cap_ru: 'Настройки языка:',
@@ -79,7 +95,13 @@ export const SETTINGS = [
   {
     en: 'Profile',
     ru: 'Профиль',
-    class: 'settings__item'
+    cap_en: 'Profile settings',
+    cap_ru: 'Настройки профиля',
+    class: 'settings__item',
+    name_cap_en: 'Change your name:',
+    name_cap_ru: 'Изменить ваше имя:',
+    city_cap_en: 'Change your city:',
+    city_cap_ru: 'Изменить ваш город:'
   },
   {
     en: 'Logout',

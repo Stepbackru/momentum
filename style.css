@@ -214,9 +214,7 @@ body {
   max-width: 60rem;
   width: 100%;
   height: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: absolute;
   bottom: 6rem;
   left: 1.5rem;
@@ -256,6 +254,51 @@ body {
   opacity: 1;
 }
 
+.settings__view .general,
+.settings__view .profile {
+  display: none;
+}
+
+.settings__view .general__caption,
+.settings__view .profile__caption {
+  font-size: 2.5rem;
+  padding: 1rem 0 1rem 2rem;
+  text-align: left;
+}
+
+.settings__view .lang,
+.settings__view .theme,
+.settings__view .username,
+.settings__view .city {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+}
+
+.settings__view .lang__caption,
+.settings__view .theme__caption,
+.settings__view .username__caption,
+.settings__view .city__caption {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  padding-right: 1rem;
+}
+
+.settings__view .lang__select,
+.settings__view .theme__select,
+.settings__view .username__select,
+.settings__view .city__select {
+  border-radius: 1rem;
+  background: #fbfbff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #fbfbff), to(#b7bcbd));
+  background: linear-gradient(180deg, #fbfbff 27%, #b7bcbd 100%);
+}
+
+.settings__view .view-active {
+  display: block;
+}
+
 .settings .logout {
   position: absolute;
   bottom: 1rem;
@@ -272,6 +315,12 @@ body {
   display: block;
   width: 0;
   height: 0;
+}
+
+.settings-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .theme__select {

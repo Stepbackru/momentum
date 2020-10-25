@@ -1,4 +1,4 @@
-import { LANG_SET, LANG, SETTINGS, THEME, TEXT_INPUT } from '../components/constants.js';
+import { LANG_SET, TEXT_INPUT } from '../components/constants.js';
 
 const template = () => {
   const langStore = localStorage.getItem(`${LANG_SET}`);
@@ -43,97 +43,6 @@ const template = () => {
       el: 'button',
       classNames: 'background-change',
       parent: 'body'
-    },
-    {
-      el: 'button',
-      classNames: 'settings__button',
-      parent: 'body'
-    },
-    {
-      el: 'div',
-      classNames: 'settings',
-      parent: 'body',
-      child: [
-        {
-          el: 'ul',
-          classNames: 'settings__list',
-          child: SETTINGS.map(elem => {
-            return ({
-              el: 'li',
-              classNames: `${elem.class}`,
-              text: `${elem[langStore]}`
-            })
-          })
-        },
-        {
-          el: 'div',
-          classNames: 'settings__view',
-          child: [
-            {
-              el: 'div',
-              classNames: 'general general-active',
-              child: [
-                {
-                  el: 'h3',
-                  classNames: 'general__caption',
-                  text: `${SETTINGS
-                    .find(elem => elem.en === 'General')[langStore]}`
-                },
-                {
-                  el: 'div',
-                  classNames: 'lang',
-                  child: [
-                    {
-                      el: 'h2',
-                      classNames: 'lang__caption',
-                      text: `${SETTINGS
-                        .find(elem => elem.en === 'General')
-                        [`lang_cap_${langStore}`]}`
-                    },
-                    {
-                      el: 'select',
-                      classNames: 'lang__select',
-                      child: LANG.map(elem => {
-                        return ({
-                          el: 'option',
-                          text: `${elem[`name_${langStore}`] ? elem[`name_${langStore}`] : elem.name}`                     
-                        })
-                      })
-                    }
-                  ]
-                },
-                {
-                  el: 'div',
-                  classNames: 'theme',
-                  child: [
-                    {
-                      el: 'h2',
-                      classNames: 'theme__caption',
-                      text: `${SETTINGS
-                        .find(elem => elem.en === 'General')
-                        [`theme_cap_${langStore}`]}`
-                    },
-                    {
-                      el: 'select',
-                      classNames: 'theme__select',
-                      child: THEME.map(elem => {
-                        return ({
-                          el: 'option',
-                          text: `${elem[`name_${langStore}`] ? elem[`name_${langStore}`] : elem[`${langStore}`]}`
-                        })
-                      })
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              el: 'div',
-              classNames: 'settings__profile'
-            }
-          ]
-        }
-      ]
     }
   ]);
 }
