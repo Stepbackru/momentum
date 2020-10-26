@@ -30,12 +30,10 @@ const showWeather = async () => {
     city.textContent = `${data.name}`;
     weathIcon.classList.add(`owf-${data.weather[0].id}`);
     weathTemp.textContent = `${Math.floor(data.main.temp)}°C`;
-    // weathWind.textContent = `wind: ${data.wind.speed} m/s`;
     weathWind.textContent = `${WEATH_LANG.wind[`${langStore}`]
       }: ${data.wind.speed} ${WEATH_LANG.metric[`${langStore}`]}`;
     weathHum.textContent = `${WEATH_LANG.humidity[`${langStore}`]
     }: ${data.main.humidity}%`;
-    // weathHum.textContent = `humidity: ${data.main.humidity}%`;
     weathDesc.textContent = data.weather[0].description;
   } catch {
     alert('Please, enter correct city');
