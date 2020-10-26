@@ -1,0 +1,380 @@
+@import './assets/css/clear.scss';
+
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  background-color: #545454;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+.wrapper {
+  max-width: 75rem;
+  opacity: 0;
+  z-index: 99;
+
+  @media (max-width: 767px) {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+}
+
+.background-change,
+.quote__change {
+  margin: 0;
+  padding: 0;
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background: url("./assets/images/reload.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  
+  &:hover {
+    filter: grayscale(.8);
+  }
+  &:active{
+    transform: scale(1.02);
+  }
+  
+  @media (max-width: 767px) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.name__caption,
+.email__caption,
+.password__caption,
+.focus__caption,
+.time,
+.today,
+.greating {
+  font-size: 5rem;
+  color: #fff;
+
+  @media (max-width: 767px) {
+    font-size: 3rem;
+  }
+}
+
+.name__input,
+.email__input,
+.password__input,
+.focus__input {
+  padding-top: 2.5rem;
+  max-width: 90%;
+  outline: none;
+  border: none;
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+  background: transparent;
+  border-bottom: 0.3rem solid #fff;
+
+  @media (max-width: 767px) {
+    font-size: 2rem;
+  }
+}
+
+.time {
+  font-size: 10rem;
+
+  @media (max-width: 767px) {
+    font-size: 5rem;
+  }
+}
+.today {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+.greating {
+  padding: 1.5rem 0 7rem;
+}
+.focus__caption {
+  font-size: 4rem;
+
+  @media (max-width: 767px) {
+    font-size: 2rem;
+  }
+}
+
+.focus-disable {
+  display: none;
+}
+
+.todo {
+  display: none;
+  &__check {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+  }
+  &__name {
+    font-size: 3rem;
+    color: #fff;
+    
+    @media (max-width: 767px) {
+      word-wrap: break-word;
+      max-height: 30rem;
+    }
+  }
+}
+
+.todo-active {
+  display: block;
+}
+
+.weather {
+  max-width: 14rem;
+  justify-content: center;
+  opacity: 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 99;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+
+  &__city {
+    text-transform: capitalize;
+    @media (max-width: 767px) {
+      font-size: 3rem;
+    }
+  }
+  &__icon {
+    font-size: 4rem;
+    padding-right: 1rem;
+  }
+  &__temperature {
+    font-size: 2.5rem;
+  }
+  &__wind {
+    font-size: 2rem;
+  }
+  &__humidity {
+    font-size: 1.9rem;
+  }
+}
+
+
+.quote {
+  position: absolute;
+  bottom: 2rem;
+  margin: 0;
+  padding: 0.5rem 2rem;
+  font-size: 2rem;
+  background: rgba(0 ,0 ,0 , 0.5);
+  border-radius: 1rem;
+  z-index: 99;
+
+  
+  @media (max-width: 767px) {
+    bottom: 5.5rem;
+  }
+
+  &__text,
+  &__author {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  &__author {
+    text-align: right;
+  }
+  &__change {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 0;
+    left: 0;
+  }
+}
+
+.settings__button {
+  margin: 0;
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  border: none;
+  outline: none;
+  background: url("./assets/images/settings.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+  opacity: .5;
+  transition: .3s;
+  
+  &:hover {
+    opacity: .8;
+  }
+  &:active{
+    transform: scale(1.1);
+  }
+}
+
+.settings {
+  padding: 1rem;
+  max-width: 60rem;
+  width: 100%;
+  height: 40%;
+  display: none;
+  position: absolute;
+  bottom: 6rem;
+  left: 1.5rem;
+  border-radius: 1rem;
+  background: #fff;
+  z-index: 100;
+  
+  @media (max-width: 767px) {
+    max-width: 29rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    border-right: .1rem solid #bbbbbb;
+    padding: 1rem 5rem 0 1rem;
+
+    @media (max-width: 767px) {
+      max-width: 29rem;
+      padding: 1rem;
+    }
+  }
+  &__item {
+    padding: 1rem 0;
+    font-size: 2rem;
+    text-align: left;
+    color: #000;
+    opacity: .5s ease-in;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+
+  &__item-active {
+    font-size: 2.5rem;
+    font-weight: 600;
+    opacity: 1;
+  }
+
+  &__view {
+    .general,
+    .profile {
+      display: none;
+
+      &__caption {
+        font-size: 2.5rem;
+        padding: 1rem 0 1rem 2rem;
+        text-align: left;
+
+        @media (max-width: 767px) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    .lang,
+    .theme,
+    .username,
+    .city {
+      display: flex;
+      padding: 1rem;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      &__caption {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        padding-right: 1rem;
+        
+        @media (max-width: 767px) {
+          font-size: 1.4rem;
+          padding: 0 1rem 0.5rem 0;
+        }
+      }
+      &__select {
+        border-radius: 1rem;
+        background: rgb(251,251,255);
+        background: linear-gradient(180deg, rgba(251,251,255,1) 27%, rgba(183,188,189,1) 100%);
+      }
+
+      &__change {
+        max-width: 15rem;
+      }
+    }
+    
+    .view-active {
+      display: block;
+    }
+  }
+
+  .logout {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1.4rem;
+    left: 1.3rem;
+    border: .7rem solid transparent;
+    border-top: 1rem solid #fff;
+    display: block;
+    width: 0;
+    height: 0;
+  }
+}
+
+.settings-active {
+  display: flex;
+}
+
+.theme__select {
+  text-transform: capitalize;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0 ,0 ,0 , 0.2);
+}
+
+.visible {
+  opacity: 1;
+  animation: fade-in 1s ease-in;
+}
+.accept {
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
