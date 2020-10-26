@@ -52,8 +52,12 @@ const removeFunc = () => {
   wrapper.remove();
   settingsB.remove();
   settingsButton.remove();
-  weather.remove();
-  changeBGButton.remove();
+  if (weather) {
+    weather.remove();
+  }
+  if (changeBGButton) {
+    changeBGButton.remove();
+  }
 }
 
 const profileSettings = () => {
