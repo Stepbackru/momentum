@@ -256,6 +256,10 @@ body {
   font-size: 2rem;
 }
 
+.weather__humidity {
+  font-size: 1.9rem;
+}
+
 .quote {
   position: absolute;
   bottom: 2rem;

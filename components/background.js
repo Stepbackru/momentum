@@ -1,4 +1,4 @@
-import { THEME, COUNT_IMAGES, THEME_SET} from './constants.js';
+import { THEME, COUNT_IMAGES, THEME_SET, TIME_LANG, LANG_SET } from './constants.js';
 import timeOfDay from './timeOfDay.js';
 
 const arrTheme = THEME.slice().splice(1);
@@ -7,10 +7,12 @@ export const background = () => {
   const body = document.body;
   const randomTheme = Math.floor(Math.random() * arrTheme.length);
   const themeStore = localStorage.getItem(`${THEME_SET}`);
+  const langStore = localStorage.getItem(`${LANG_SET}`);
 
   const bgRandomUrl = `./assets/templates/${
     themeStore ? themeStore : arrTheme[randomTheme].en
-  }/${timeOfDay()}/${randomImage(COUNT_IMAGES)}.jpg`;
+  }/${TIME_LANG.find(el => el[`${langStore}`] === timeOfDay()).en
+  }/${randomImage(COUNT_IMAGES)}.jpg`;
   
   fetch(bgRandomUrl)
     .then(res => res.url)

@@ -20,22 +20,22 @@ const showWeather = async () => {
   const langStore = localStorage.getItem(`${LANG_SET}`);
   const cityStore = localStorage.getItem(`${CITY_SET}`);
 
+
+
   try {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityStore}&lang=${langStore}&appid=${WEATH_API_KEY}&units=metric`;
     const res = await fetch(url);
     const data = await res.json();
 
-    city.textContent = `${cityStore}`;
+    city.textContent = `${data.name}`;
     weathIcon.classList.add(`owf-${data.weather[0].id}`);
     weathTemp.textContent = `${Math.floor(data.main.temp)}°C`;
-    weathWind.textContent = `wind: ${data.wind.speed} m/s`;
-    // weathWind.textContent = `${WEATH_LANG.forEach(el =>
-    //   el.wind[`${langStore}`]
-    // })}: ${data.wind.speed} m/s`;
-    // weathHum.textContent = `${WEATH_LANG.forEach(el => {
-    //   el.humidity[`${langStore}`]
-    // })}: ${data.main.humidity}%`;
-    weathHum.textContent = `humidity: ${data.main.humidity}%`;
+    // weathWind.textContent = `wind: ${data.wind.speed} m/s`;
+    weathWind.textContent = `${WEATH_LANG.wind[`${langStore}`]
+      }: ${data.wind.speed} ${WEATH_LANG.metric[`${langStore}`]}`;
+    weathHum.textContent = `${WEATH_LANG.humidity[`${langStore}`]
+    }: ${data.main.humidity}%`;
+    // weathHum.textContent = `humidity: ${data.main.humidity}%`;
     weathDesc.textContent = data.weather[0].description;
   } catch {
     alert('Please, enter correct city');

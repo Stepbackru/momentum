@@ -86,21 +86,42 @@ export const LANG = [
   }
 ];
 
+// time of day
+export const TIME_LANG = [
+  {
+    en: 'morning',
+    ru: 'Доброе утро'
+  },
+  {
+    en: 'day',
+    ru: 'Добрый день'
+  },
+  {
+    en: 'evening',
+    ru: 'Добрый вечер'
+  },
+  {
+    en: 'night',
+    ru: 'Доброй ночи'
+  }
+];
+
 // weather
 export const WEATH_API_KEY = 'a54a1dab66ed11c5fb14c921184f4634';
-export const WEATH_LANG = [
-  {
+export const WEATH_LANG = {
     wind: {
       en: 'wind',
       ru: 'ветер'
+    },
+    metric: {
+      en: 'm/s',
+      ru: 'м/c'
     },
     humidity: {
       en: 'humidity',
       ru: 'влажность'
     }
-  }
-];
-
+  };
 
 // settings
 export const SETTINGS = [
