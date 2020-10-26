@@ -6,7 +6,6 @@ import settingsBlock from './data/settingsBlock.js';
 import quoteBlock from './data/quoteBlock.js';
 import settings from './components/settings.js';
 import showQuote from './components/showQuote.js';
-import checkHandler from './components/checkHandler.js';
 
 window.onload = () => {
   init();
@@ -15,7 +14,6 @@ window.onload = () => {
   renderTemplate(quoteBlock);
   showQuote();
   settings();
-  checkHandler();
 
   const logout = document.querySelector(`.${LOGOUT_CLASS}`);
   logout.addEventListener('click', (e) => {

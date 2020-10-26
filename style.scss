@@ -21,6 +21,11 @@ body {
   max-width: 75rem;
   opacity: 0;
   z-index: 99;
+
+  @media (max-width: 767px) {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
 }
 
 .background-change,
@@ -46,6 +51,11 @@ body {
   &:active{
     transform: scale(1.02);
   }
+  
+  @media (max-width: 767px) {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 .name__caption,
@@ -57,6 +67,10 @@ body {
 .greating {
   font-size: 5rem;
   color: #fff;
+
+  @media (max-width: 767px) {
+    font-size: 3rem;
+  }
 }
 
 .name__input,
@@ -72,10 +86,18 @@ body {
   text-align: center;
   background: transparent;
   border-bottom: 0.3rem solid #fff;
+
+  @media (max-width: 767px) {
+    font-size: 2rem;
+  }
 }
 
 .time {
   font-size: 10rem;
+
+  @media (max-width: 767px) {
+    font-size: 5rem;
+  }
 }
 .today {
   text-transform: capitalize;
@@ -86,6 +108,10 @@ body {
 }
 .focus__caption {
   font-size: 4rem;
+
+  @media (max-width: 767px) {
+    font-size: 2rem;
+  }
 }
 
 .focus-disable {
@@ -102,6 +128,11 @@ body {
   &__name {
     font-size: 3rem;
     color: #fff;
+    
+    @media (max-width: 767px) {
+      word-wrap: break-word;
+      max-height: 30rem;
+    }
   }
 }
 
@@ -125,6 +156,9 @@ body {
 
   &__city {
     text-transform: capitalize;
+    @media (max-width: 767px) {
+      font-size: 3rem;
+    }
   }
   &__icon {
     font-size: 4rem;
@@ -148,6 +182,11 @@ body {
   background: rgba(0 ,0 ,0 , 0.5);
   border-radius: 1rem;
   z-index: 99;
+
+  
+  @media (max-width: 767px) {
+    bottom: 5.5rem;
+  }
 
   &__text,
   &__author {
@@ -202,12 +241,21 @@ body {
   border-radius: 1rem;
   background: #fff;
   z-index: 100;
+  
+  @media (max-width: 767px) {
+    max-width: 29rem;
+  }
 
   &__list {
     display: flex;
     flex-direction: column;
     border-right: .1rem solid #bbbbbb;
     padding: 1rem 5rem 0 1rem;
+
+    @media (max-width: 767px) {
+      max-width: 29rem;
+      padding: 1rem;
+    }
   }
   &__item {
     padding: 1rem 0;
@@ -237,6 +285,10 @@ body {
         font-size: 2.5rem;
         padding: 1rem 0 1rem 2rem;
         text-align: left;
+
+        @media (max-width: 767px) {
+          font-size: 1.8rem;
+        }
       }
     }
     .lang,
@@ -246,15 +298,28 @@ body {
       display: flex;
       padding: 1rem;
 
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+
       &__caption {
         font-size: 1.6rem;
         line-height: 1.6rem;
-        padding-right: 1rem;;
+        padding-right: 1rem;
+        
+        @media (max-width: 767px) {
+          font-size: 1.4rem;
+          padding: 0 1rem 0.5rem 0;
+        }
       }
       &__select {
         border-radius: 1rem;
         background: rgb(251,251,255);
         background: linear-gradient(180deg, rgba(251,251,255,1) 27%, rgba(183,188,189,1) 100%);
+      }
+
+      &__change {
+        max-width: 15rem;
       }
     }
     

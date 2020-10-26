@@ -61,6 +61,13 @@ body {
   z-index: 99;
 }
 
+@media (max-width: 767px) {
+  .wrapper {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+}
+
 .background-change,
 .quote__change {
   margin: 0;
@@ -92,6 +99,14 @@ body {
           transform: scale(1.02);
 }
 
+@media (max-width: 767px) {
+  .background-change,
+  .quote__change {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
 .name__caption,
 .email__caption,
 .password__caption,
@@ -101,6 +116,18 @@ body {
 .greating {
   font-size: 5rem;
   color: #fff;
+}
+
+@media (max-width: 767px) {
+  .name__caption,
+  .email__caption,
+  .password__caption,
+  .focus__caption,
+  .time,
+  .today,
+  .greating {
+    font-size: 3rem;
+  }
 }
 
 .name__input,
@@ -118,8 +145,23 @@ body {
   border-bottom: 0.3rem solid #fff;
 }
 
+@media (max-width: 767px) {
+  .name__input,
+  .email__input,
+  .password__input,
+  .focus__input {
+    font-size: 2rem;
+  }
+}
+
 .time {
   font-size: 10rem;
+}
+
+@media (max-width: 767px) {
+  .time {
+    font-size: 5rem;
+  }
 }
 
 .today {
@@ -133,6 +175,12 @@ body {
 
 .focus__caption {
   font-size: 4rem;
+}
+
+@media (max-width: 767px) {
+  .focus__caption {
+    font-size: 2rem;
+  }
 }
 
 .focus-disable {
@@ -152,6 +200,13 @@ body {
 .todo__name {
   font-size: 3rem;
   color: #fff;
+}
+
+@media (max-width: 767px) {
+  .todo__name {
+    word-wrap: break-word;
+    max-height: 30rem;
+  }
 }
 
 .todo-active {
@@ -182,6 +237,12 @@ body {
   text-transform: capitalize;
 }
 
+@media (max-width: 767px) {
+  .weather__city {
+    font-size: 3rem;
+  }
+}
+
 .weather__icon {
   font-size: 4rem;
   padding-right: 1rem;
@@ -204,6 +265,12 @@ body {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
   z-index: 99;
+}
+
+@media (max-width: 767px) {
+  .quote {
+    bottom: 5.5rem;
+  }
 }
 
 .quote__text, .quote__author {
@@ -264,6 +331,12 @@ body {
   z-index: 100;
 }
 
+@media (max-width: 767px) {
+  .settings {
+    max-width: 29rem;
+  }
+}
+
 .settings__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -274,6 +347,13 @@ body {
           flex-direction: column;
   border-right: .1rem solid #bbbbbb;
   padding: 1rem 5rem 0 1rem;
+}
+
+@media (max-width: 767px) {
+  .settings__list {
+    max-width: 29rem;
+    padding: 1rem;
+  }
 }
 
 .settings__item {
@@ -307,6 +387,13 @@ body {
   text-align: left;
 }
 
+@media (max-width: 767px) {
+  .settings__view .general__caption,
+  .settings__view .profile__caption {
+    font-size: 1.8rem;
+  }
+}
+
 .settings__view .lang,
 .settings__view .theme,
 .settings__view .username,
@@ -315,6 +402,18 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 1rem;
+}
+
+@media (max-width: 767px) {
+  .settings__view .lang,
+  .settings__view .theme,
+  .settings__view .username,
+  .settings__view .city {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .settings__view .lang__caption,
@@ -326,6 +425,16 @@ body {
   padding-right: 1rem;
 }
 
+@media (max-width: 767px) {
+  .settings__view .lang__caption,
+  .settings__view .theme__caption,
+  .settings__view .username__caption,
+  .settings__view .city__caption {
+    font-size: 1.4rem;
+    padding: 0 1rem 0.5rem 0;
+  }
+}
+
 .settings__view .lang__select,
 .settings__view .theme__select,
 .settings__view .username__select,
@@ -334,6 +443,13 @@ body {
   background: #fbfbff;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #fbfbff), to(#b7bcbd));
   background: linear-gradient(180deg, #fbfbff 27%, #b7bcbd 100%);
+}
+
+.settings__view .lang__change,
+.settings__view .theme__change,
+.settings__view .username__change,
+.settings__view .city__change {
+  max-width: 15rem;
 }
 
 .settings__view .view-active {
