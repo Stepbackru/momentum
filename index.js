@@ -4,6 +4,7 @@ import background from './components/background.js';
 import renderTemplate from './components/renderTemplate.js';
 import settingsBlock from './data/settingsBlock.js';
 import quoteBlock from './data/quoteBlock.js';
+import overlayBlock from './data/overlayBlock.js';
 import settings from './components/settings.js';
 import showQuote from './components/showQuote.js';
 
@@ -12,6 +13,7 @@ window.onload = () => {
   background();
   renderTemplate(settingsBlock());
   renderTemplate(quoteBlock);
+  renderTemplate(overlayBlock);
   showQuote();
   settings();
 

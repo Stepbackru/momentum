@@ -26,7 +26,6 @@ const init = () => {
 
   if (!usernameStore) {
     renderTemplate(T.modalName());
-    renderTemplate(T.overlayBlock);
     submitForm(C.USERNAME_CLASS, C.USERNAME_SET, true);
   } else if (!emailStore) {
     renderTemplate(T.modalEmail(usernameStore));
