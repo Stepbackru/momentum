@@ -20,7 +20,7 @@ const submitForm = (elem, key, modal) => {
     if (e.key === SUBMIT_KEY || e.code === SUBMIT_KEY) {
       const result = element.value.trim();
       
-      if (result.length) {
+      if (result.length && element.checkValidity()) {
         localStorage.setItem(`${key}`, `${result}`);
         element.value = '';
         element.blur();
