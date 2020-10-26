@@ -6,3 +6,4 @@ export {default as weatherBlock} from './weatherBlock.js';
 export {default as quoteBlock} from './quoteBlock.js';
 export {default as overlayBlock} from './overlayBlock.js';
 export {default as settingsBlock} from './settingsBlock.js';
+export {default as todoBlock} from './todoBlock.js';

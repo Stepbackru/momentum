@@ -26,8 +26,11 @@ const render = (args) => {
 
   // Parent of element (for first element)
   if (args.parent) {
+
     if (args.parent === 'body') {
       document.body.appendChild(element);
+    } else {
+      document.querySelector(`.${args.parent}`).appendChild(element);
     }
   }
 

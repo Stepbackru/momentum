@@ -21,19 +21,3 @@ const date = () => {
 }
 
 export default date;
-
-
-// function rusDay() {
-//   const date = new Date();
-//   const options = {
-//     day: 'numeric',
-//     month: 'long'
-//   };
-//   return date.toLocaleDateString('ru-RU', options);
-// }
-
-// function rusWeekday() {
-//   const date = new Date();
-//   const options = {      weekday: 'long'    };
-//   return date.toLocaleDateString('en-EN', options);
-//  }

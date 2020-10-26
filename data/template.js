@@ -2,7 +2,6 @@ import { LANG_SET, TEXT_INPUT, FOCUS_SET } from '../components/constants.js';
 
 const template = () => {
   const langStore = localStorage.getItem(`${LANG_SET}`);
-  const focusStore = localStorage.getItem(`${FOCUS_SET}`);
 
   return ([
     {
@@ -35,22 +34,6 @@ const template = () => {
               el: 'input',
               classNames: 'focus__input',
               dataAttr: [['type', 'text'],['autocomplete', 'off']]
-            }
-          ]
-        },
-        {
-          el: 'div',
-          classNames: 'todo',
-          child: [
-            {
-              el: 'input',
-              classNames: 'todo__check',
-              dataAttr: [['type', 'checkbox']]
-            },
-            {
-              el: 'span',
-              classNames: 'todo__name',
-              text: `${focusStore ? focusStore : ''}`
             }
           ]
         }
