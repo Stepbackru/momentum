@@ -31,7 +31,7 @@ const showWeather = async () => {
     weathIcon.classList.add(`owf-${data.weather[0].id}`);
     weathTemp.textContent = `${Math.floor(data.main.temp)}°C`;
     weathWind.textContent = `${WEATH_LANG.wind[`${langStore}`]
-      }: ${data.wind.speed} ${WEATH_LANG.metric[`${langStore}`]}`;
+      }: ${Math.floor(data.wind.speed)} ${WEATH_LANG.metric[`${langStore}`]}`;
     weathHum.textContent = `${WEATH_LANG.humidity[`${langStore}`]
     }: ${data.main.humidity}%`;
     weathDesc.textContent = data.weather[0].description;
