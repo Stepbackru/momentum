@@ -12,13 +12,16 @@ import * as T from '../data/index.js';
 const init = () => {
   const langStore = localStorage.getItem(`${C.LANG_SET}`);
   const focusStore = localStorage.getItem(`${C.FOCUS_SET}`);
+  const cityStore = localStorage.getItem(`${C.CITY_SET}`);
 
   if (!langStore) {
     localStorage.setItem(`${C.LANG_SET}`, `${C.LANG
     .find(elem => elem.short === 'en').short}`);
   }
   
-  getUserCity();
+  if (!cityStore) {
+    getUserCity();
+  }
 
   const usernameStore = localStorage.getItem(`${C.USERNAME_SET}`);
   const emailStore = localStorage.getItem(`${C.EMAIL_SET}`);
