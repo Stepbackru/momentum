@@ -2,6 +2,7 @@ import * as C from './constants.js';
 import renderTemplate from './renderTemplate.js';
 import submitForm from './submitForm.js';
 import background from './background.js';
+import checkHandler from './checkHandler.js';
 import showTime from './showTime.js';
 import greating from './greating.js';
 import date from './date.js';
@@ -18,7 +19,7 @@ const init = () => {
     localStorage.setItem(`${C.LANG_SET}`, `${C.LANG
     .find(elem => elem.short === 'en').short}`);
   }
-  
+
   if (!cityStore) {
     getUserCity();
   }
@@ -49,6 +50,7 @@ const init = () => {
 
     const focus = document.querySelector(`.${C.FOCUS_CLASS}`);
     if (focusStore) {
+      checkHandler();
       focus.classList.toggle(`${C.FOCUS_DIS_CLASS}`);
     }
 

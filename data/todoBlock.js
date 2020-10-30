@@ -6,7 +6,7 @@ const todoBlock = () => {
   return ([
     {
       el: 'div',
-      classNames: 'todo',
+      classNames: `todo ${focusStore ? 'todo-active' : ''}`,
       parent: 'wrapper',
       child: [
         {
