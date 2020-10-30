@@ -49,9 +49,11 @@ const init = () => {
 
 
     const focus = document.querySelector(`.${C.FOCUS_CLASS}`);
+    const todo = document.querySelector(`.${C.TODO_CLASS}`);
     if (focusStore) {
       checkHandler();
       focus.classList.toggle(`${C.FOCUS_DIS_CLASS}`);
+      todo.classList.toggle(`${C.TODO_ACT_CLASS}`);
     }
 
     const changeBGButton = document.querySelector(`.${C.BG_CHANGE_CLASS}`);

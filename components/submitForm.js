@@ -32,6 +32,8 @@ const submitForm = (elem, key, modal) => {
           todo.remove()
           renderTemplate(todoBlock());
 
+          const todo2 = document.querySelector(`.${TODO_CLASS}`);
+          todo2.classList.toggle(`${TODO_ACT_CLASS}`);
           checkHandler();
         }
       }
